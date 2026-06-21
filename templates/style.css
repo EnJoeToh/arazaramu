@@ -145,7 +145,7 @@ time,
 
 .entry-date {
   display: inline-block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", "YuGothic", system-ui, sans-serif;
   margin-bottom: 10px;
 }
 
