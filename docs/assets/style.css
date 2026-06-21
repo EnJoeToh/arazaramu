@@ -43,7 +43,15 @@ a {
   border-bottom: 1px solid var(--line);
   display: flex;
   gap: 12px;
+  justify-content: space-between;
   padding: 16px max(18px, env(safe-area-inset-left));
+}
+
+.site-heading {
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
 }
 
 .site-title {
@@ -58,6 +66,13 @@ a {
   color: var(--muted);
   font-size: 0.9rem;
   margin: 0;
+}
+
+.feed-link {
+  color: var(--muted);
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  text-decoration: none;
 }
 
 .page {
