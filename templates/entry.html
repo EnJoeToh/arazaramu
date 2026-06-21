@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% set asset_prefix = '../' %}
+{% set root_prefix = '../' %}
+{% block title %}{{ entry.date_text }} - {{ site_title }}{% endblock %}
+{% block content %}
+  <article class="entry entry-summary">
+    <p class="entry-date">
+      <a name="{{ entry.date_text }}"></a>
+      <time datetime="{{ entry.date_text }}">{{ entry.display_date }}</time>
+    </p>
+    {{ entry.body_html | safe }}
+  </article>
+
+  <nav class="entry-nav" aria-label="Entry navigation">
+    {% if previous_entry %}
+      <a href="{{ previous_entry.output_name }}">Previous</a>
+    {% endif %}
+    <a href="../index.html">Top</a>
+    {% if next_entry %}
+      <a href="{{ next_entry.output_name }}">Next</a>
+    {% endif %}
+  </nav>
+{% endblock %}

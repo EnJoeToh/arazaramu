@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ month }} - {{ site_title }}{% endblock %}
+{% block content %}
+  <div class="entry-stream">
+    {% for entry in entries %}
+      <article class="entry entry-summary">
+        <p class="entry-date">
+          <a name="{{ entry.date_text }}"></a>
+          <a class="entry-date-link" href="{{ entry.url }}">
+            <time datetime="{{ entry.date_text }}">{{ entry.display_date }}</time>
+          </a>
+        </p>
+        {{ entry.body_html | safe }}
+      </article>
+    {% else %}
+      <p>No entries yet.</p>
+    {% endfor %}
+  </div>
+
+  <nav class="page-nav">
+    <a href="index.html">Index</a>
+  </nav>
+{% endblock %}
